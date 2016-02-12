@@ -1,4 +1,4 @@
-var DocumentSearch = {
+module.exports = {
   controller: function() {
     return {
       textInput: ''
