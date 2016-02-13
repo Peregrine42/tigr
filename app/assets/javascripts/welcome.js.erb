@@ -1,0 +1,7 @@
+components = {};
+<% Dir.entries("app/assets/javascripts/components")
+  .select {|f| !File.directory?(f) }
+  .map { |f| File.basename(f, ".js") }
+  .each do |component_name| %>
+  components.<%= component_name %> = require("components/<%= component_name %>")
+<% end %>
